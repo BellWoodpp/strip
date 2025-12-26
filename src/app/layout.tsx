@@ -32,6 +32,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* Google Analytics 分析工具 */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LPHSS8GTC2" strategy="beforeInteractive" />
+        <Script id="gtag-init" strategy="beforeInteractive">
+          {`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LPHSS8GTC2');
+          `.trim()}
+        </Script>
         <Script
           async
           crossOrigin="anonymous"
