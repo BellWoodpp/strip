@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { WsrvImage } from "@/components/WsrvImage";
 import Link from "next/link";
 
 export default function AppHeader() {
@@ -6,12 +6,13 @@ export default function AppHeader() {
     <header className="header">
       <div className="container">
         <Link href="/" className="brand">
-          <Image
+          <WsrvImage
             src="https://r2bucket.stripchart.org/trip.ico"
             alt=""
             className="logo"
             width={36}
             height={36}
+            layout="fixed"
             priority
           />
           strip chart

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { WsrvImage } from "@/components/WsrvImage";
 import { useEffect, useRef, useState } from "react";
 
 export default function Faq() {
@@ -55,12 +55,13 @@ export default function Faq() {
             onClick={openImage("https://r2bucket.stripchart.org/stript-chart.jpg", "Urine test strip reference chart enlarged")}
             aria-label="放大色卡示意图"
           >
-            <Image
+            <WsrvImage
               src="https://r2bucket.stripchart.org/stript-chart.jpg"
               alt="Urine test strip reference chart"
               className="faq-intro__image"
               width={360}
               height={240}
+              layout="constrained"
             />
           </button>
         </div>
@@ -136,12 +137,13 @@ export default function Faq() {
               )}
               aria-label="放大 Excel 条形图示意图"
             >
-              <Image
+              <WsrvImage
                 src="https://r2bucket.stripchart.org/excel/BlogPic-rce91.webp"
                 alt="Excel strip chart example preview"
                 className="faq-intro__image"
                 width={360}
                 height={240}
+                layout="constrained"
               />
             </button>
           </div>
@@ -161,12 +163,13 @@ export default function Faq() {
               )}
               aria-label="放大 Excel 数据来源图表"
             >
-              <Image
+              <WsrvImage
                 src="https://r2bucket.stripchart.org/excel/Fig1-defae.webp"
                 alt="Excel strip chart data source preview"
                 className="faq-intro__image"
                 width={360}
                 height={240}
+                layout="constrained"
               />
             </button>
           </div>
@@ -198,12 +201,13 @@ export default function Faq() {
           tabIndex={-1}
           ref={modalRef}
         >
-          <Image
+          <WsrvImage
             src={modalImageSrc}
             alt={modalImageAlt || "Expanded strip chart illustration"}
             className="image-modal__content"
             width={800}
             height={600}
+            layout="constrained"
             onClick={closeImage}
           />
           <button type="button" className="image-modal__close" onClick={closeImage} aria-label="关闭放大图片">

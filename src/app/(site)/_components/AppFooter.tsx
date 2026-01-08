@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { WsrvImage } from "@/components/WsrvImage";
 
 export default function AppFooter() {
   const year = new Date().getFullYear();
@@ -16,19 +16,21 @@ export default function AppFooter() {
           <p className="label">Friend Links</p>
           <div className="link-grid">
             <a className="friend-link" href="https://billybobgames.org/" target="_blank" rel="noopener noreferrer">
-              <Image
+              <WsrvImage
                 src="https://r2bucket.billybobgames.org/logo/amazon-game-development.svg"
                 alt="Billy Bob Games"
                 width={68}
                 height={68}
+                layout="fixed"
               />
             </a>
             <a className="friend-link" href="https://silksong.uk/" target="_blank" rel="noopener noreferrer">
-              <Image
+              <WsrvImage
                 src="https://r2boot.silksong.uk/silksong/silksong3.ico"
                 alt="Silksong"
                 width={68}
                 height={68}
+                layout="fixed"
               />
             </a>
           </div>
