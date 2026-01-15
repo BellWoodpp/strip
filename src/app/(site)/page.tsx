@@ -3,15 +3,67 @@ import Link from "next/link";
 import Faq from "./_components/Faq";
 
 export const metadata: Metadata = {
-  title: "strip chart",
+  title: "Real-time strip chart monitoring",
   description:
     "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
   keywords: ["strip chart", "real-time data visualization", "live charts", "data monitoring"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Real-time strip chart monitoring",
+    description:
+      "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
+    url: "/",
+    siteName: "strip chart",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "/chart.svg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real-time strip chart monitoring",
+    description:
+      "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
+    images: ["/chart.svg"],
+  },
 };
 
 export default function HomePage() {
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "how to read urine test strips results chart?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Dip the strip, remove excess, and compare reagent pad colors to the bottle chart at the specified time marks to interpret substances like protein, glucose, and pH.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "how to make a strip chart in excel",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Use a strip plot approach: place observations on a single axis and format markers to visualize distribution; build the chart from a table of values and tune axis/marker styling in Excel.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is the strip chart optimized for compliance reviews?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Audit teams can annotate timelines, export captures, and review continuous strip chart history efficiently during compliance walkthroughs.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
       <section className="hero">
         <p className="eyebrow">Real-Time Visualization</p>
         <h1>strip chart intelligence for decisive American teams</h1>

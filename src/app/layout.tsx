@@ -5,6 +5,7 @@ import AppHeader from "./(site)/_components/AppHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stripchart.org"),
   title: {
     default: "strip chart",
     template: "%s | strip chart",
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
   description:
     "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
   keywords: ["strip chart", "real-time data visualization", "live charts", "data monitoring"],
+  openGraph: {
+    siteName: "strip chart",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/chart.svg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/chart.svg"],
+  },
   icons: [
     {
       rel: "icon",
