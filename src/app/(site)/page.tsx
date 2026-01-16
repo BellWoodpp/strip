@@ -3,7 +3,7 @@ import Link from "next/link";
 import Faq from "./_components/Faq";
 
 export const metadata: Metadata = {
-  title: "Real-time strip chart monitoring",
+  title: "Stripchart: live strip chart demo and guides",
   description:
     "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
   keywords: ["strip chart", "real-time data visualization", "live charts", "data monitoring"],
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Real-time strip chart monitoring",
+    title: "Stripchart: live strip chart demo and guides",
     description:
       "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
     url: "/",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real-time strip chart monitoring",
+    title: "Stripchart: live strip chart demo and guides",
     description:
       "Explore strip chart visualizations, control live data streams, and learn how real-time strip charts drive informed decisions for American teams.",
     images: ["/chart.svg"],
@@ -36,26 +36,26 @@ export default function HomePage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "how to read urine test strips results chart?",
+        name: "What is a strip chart?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Dip the strip, remove excess, and compare reagent pad colors to the bottle chart at the specified time marks to interpret substances like protein, glucose, and pH.",
+          text: "A strip chart is a scrolling time-series visualization designed for continuous monitoring. New samples appear at one edge while older data moves across the screen, helping teams spot drift, spikes, and anomalies quickly.",
         },
       },
       {
         "@type": "Question",
-        name: "how to make a strip chart in excel",
+        name: "When should I use a strip chart vs a line chart?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Use a strip plot approach: place observations on a single axis and format markers to visualize distribution; build the chart from a table of values and tune axis/marker styling in Excel.",
+          text: "Use a strip chart when data is live and you need continuous awareness in a moving window. Use a line chart when you need a stable snapshot for analysis, reporting, or comparing longer historical ranges.",
         },
       },
       {
         "@type": "Question",
-        name: "Is the strip chart optimized for compliance reviews?",
+        name: "How do I build a strip chart in Excel?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Audit teams can annotate timelines, export captures, and review continuous strip chart history efficiently during compliance walkthroughs.",
+          text: "Use a time-series line chart, lock the y-axis range, and format for readability. To mimic a moving window, filter to the last N rows or last N minutes with helper columns.",
         },
       },
     ],
@@ -75,10 +75,40 @@ export default function HomePage() {
           <Link href="/stripchart" className="primary">
             Launch the live strip chart
           </Link>
+          <Link href="/guides" className="secondary">
+            Read strip chart guides
+          </Link>
           <Link href="/#features" className="secondary">
             View capabilities
           </Link>
         </div>
+      </section>
+
+      <section className="section">
+        <h2>Learn strip charts (fast)</h2>
+        <p>
+          If you are searching for \"stripchart\" or \"strip chart,\" these guides cover the basics and the common monitoring workflows.
+        </p>
+        <ul className="feature-grid">
+          <li>
+            <h3>
+              <Link href="/guides/what-is-a-strip-chart">What is a strip chart?</Link>
+            </h3>
+            <p>Definition, key characteristics, and where a strip chart beats a static dashboard.</p>
+          </li>
+          <li>
+            <h3>
+              <Link href="/guides/strip-chart-vs-line-chart">Strip chart vs line chart</Link>
+            </h3>
+            <p>How they differ, and which one to use for monitoring vs reporting.</p>
+          </li>
+          <li>
+            <h3>
+              <Link href="/guides/real-time-strip-chart">Real-time strip chart monitoring</Link>
+            </h3>
+            <p>Cadence, moving windows, and how to keep short-lived spikes visible.</p>
+          </li>
+        </ul>
       </section>
 
       <section className="section">

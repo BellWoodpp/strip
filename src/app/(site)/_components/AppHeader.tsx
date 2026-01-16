@@ -24,6 +24,9 @@ export default function AppHeader() {
           <Link href="/stripchart" className="link">
             Live Strip Chart
           </Link>
+          <Link href="/guides" className="link">
+            Guides
+          </Link>
           <Link href="/#features" className="link">
             Features
           </Link>

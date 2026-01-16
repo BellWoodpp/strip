@@ -11,6 +11,9 @@ export default function AppFooter() {
           <p className="body-text">
             Real-time strip chart visualizations tailored for data-driven teams across the United States.
           </p>
+          <p className="body-text">
+            <a href="/guides">Guides</a> | <a href="/stripchart">Live demo</a>
+          </p>
         </div>
         <div className="links">
           <p className="label">Friend Links</p>
